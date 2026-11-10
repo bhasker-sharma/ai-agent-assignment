@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    # LLM_PROVIDER, LLM_MODEL and the API key. Create it with: copy .env.example .env
+    env_file: .env
+    volumes:
+      # Documents and cases from the host, so a new file needs no rebuild, only a re-index.
+      - ./data:/app/data
+      # The index lives in a named volume: it starts as the one built into the image
+      # and keeps any re-index across container restarts.
+      - index:/app/index
+      # predictions.json and eval_results.json are written here.
+      - ./results:/app/results
+
+volumes:
+  index:

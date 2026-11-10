@@ -1,0 +1,105 @@
+{
+  "as_of_date": "2026-11-06",
+  "cases": [
+    {
+      "case_id": "U01",
+      "record_type": "inspection",
+      "carrier": "Demo Carrier D",
+      "report_number": "UT-DEMO-07761",
+      "event_date": "2023-03-02",
+      "state": "UT",
+      "level": 2,
+      "unit": {
+        "plate": "DEMO-4117",
+        "vin": "TESTVIN0000000042"
+      },
+      "violations": [
+        {
+          "code": "393.45",
+          "description": "Brake hose defect",
+          "out_of_service": false,
+          "citation_number": null
+        }
+      ],
+      "staff_note": "Plate on this report is wrong. Registration attached.",
+      "evidence_files": [
+        "U01_registration.txt"
+      ]
+    },
+    {
+      "case_id": "U02",
+      "record_type": "inspection",
+      "carrier": "Demo Carrier A",
+      "report_number": "WA-DEMO-33015",
+      "event_date": "2026-03-15",
+      "state": "WA",
+      "level": 2,
+      "unit": {
+        "plate": "DEMO-1204",
+        "vin": "TESTVIN0000000013"
+      },
+      "violations": [
+        {
+          "code": "392.2-SLLS3",
+          "description": "Speeding 11-14 mph over the limit",
+          "out_of_service": false,
+          "citation_number": "CT-91882"
+        }
+      ],
+      "staff_note": "Court paperwork attached. Please advise.",
+      "evidence_files": [
+        "U02_court_disposition_scan.pdf"
+      ]
+    },
+    {
+      "case_id": "U03",
+      "record_type": "inspection",
+      "carrier": "Demo Carrier B",
+      "report_number": "ID-DEMO-18840",
+      "event_date": "2026-08-29",
+      "state": "ID",
+      "level": 3,
+      "unit": {
+        "plate": "DEMO-2250",
+        "vin": "TESTVIN0000000023"
+      },
+      "violations": [
+        {
+          "code": "395.3(a)(3)(i)",
+          "description": "Driving beyond the 11 hour limit",
+          "out_of_service": false,
+          "citation_number": null
+        }
+      ],
+      "staff_note": "Driver says the officer got this wrong. Statement attached.",
+      "evidence_files": [
+        "U03_driver_statement.txt"
+      ]
+    },
+    {
+      "case_id": "U04",
+      "record_type": "inspection",
+      "carrier": "Demo Carrier C",
+      "report_number": "CO-DEMO-27790",
+      "event_date": "2026-09-22",
+      "state": "CO",
+      "level": 2,
+      "unit": {
+        "plate": "DEMO-3344",
+        "vin": "TESTVIN0000000033"
+      },
+      "violations": [
+        {
+          "code": "392.80(a)",
+          "description": "Texting while driving",
+          "out_of_service": false,
+          "citation_number": "CT-10277"
+        }
+      ],
+      "staff_note": "Court date happened last month. Can we file?",
+      "evidence_files": [
+        "U04_court_notice.txt"
+      ]
+    }
+  ]
+}

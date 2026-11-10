@@ -1,0 +1,6 @@
+CARRIER RECORD EXTRACT (two rows returned)
+
+'Report no.     | Date       | Time  | Location            | Plate     | Level
+NM-DEMO-30177  | 2026-07-08 | 09:42 | Port of Entry 12    | DEMO-2231 | 2
+NM-DEMO-30177  | 2026-07-08 | 09:42 | Port of Entry 12    | DEMO-2231 | 2
+Both rows are posted as separate inspections and both count on the carrier record.

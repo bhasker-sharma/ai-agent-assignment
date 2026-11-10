@@ -1,0 +1,6 @@
+EQUIPMENT INTERCHANGE RECEIPT
+Date out: 2026-09-02   Date in: 2026-09-05
+Motor carrier: Demo Carrier C
+Chassis no.: DEMO-CHZ-77
+Equipment provider: Fictional Chassis Pool LLC, provider code FCPL
+Note: Chassis supplied by the provider above. Brake maintenance is the provider's duty.

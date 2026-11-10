@@ -1,0 +1,469 @@
+{
+  "model": "openai/gpt-4.1",
+  "as_of_date": "2026-11-06",
+  "runs_per_case": 3,
+  "summary": {
+    "cases": 8,
+    "reviews": 24,
+    "decision_accuracy": 1,
+    "rdr_type_accuracy": 1,
+    "exact_accuracy": 1.0,
+    "section_recall": 1.0,
+    "section_precision": 0.6458333333333334,
+    "stable_cases": 8,
+    "mean_confidence_correct": 0.995,
+    "mean_confidence_wrong": null,
+    "confusion": {
+      "DO_NOT_FILE": {
+        "DO_NOT_FILE": 9
+      },
+      "FILE": {
+        "FILE": 15
+      }
+    }
+  },
+  "cases": [
+    {
+      "case_id": "D01",
+      "expected": {
+        "decision": "DO_NOT_FILE",
+        "rdr_type": null,
+        "sections": [
+          "H4.2"
+        ]
+      },
+      "stable": true,
+      "attempts": [
+        {
+          "decision": "DO_NOT_FILE",
+          "rdr_type": null,
+          "sections": [
+            "H4.2"
+          ],
+          "confidence": 1.0,
+          "reason": "The only evidence is an invoice showing the tire was replaced after the inspection. Section H4.2 states that a later repair does not remove a violation. There is no evidence that the violation was incorrect at the time of inspection.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 1.0
+        },
+        {
+          "decision": "DO_NOT_FILE",
+          "rdr_type": null,
+          "sections": [
+            "H4.2"
+          ],
+          "confidence": 1.0,
+          "reason": "The only evidence is an invoice showing the tire was replaced after the inspection. Section H4.2 states that a later repair does not remove a violation, so the recommendation is DO_NOT_FILE. The filing window is open, but the evidence does not support filing.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 1.0
+        },
+        {
+          "decision": "DO_NOT_FILE",
+          "rdr_type": null,
+          "sections": [
+            "H4.2"
+          ],
+          "confidence": 1.0,
+          "reason": "The only evidence is an invoice showing the tire was replaced after the inspection, which does not support removing the violation. Section H4.2 states that a later repair does not remove a violation. No other evidence or rule applies.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 1.0
+        }
+      ]
+    },
+    {
+      "case_id": "D02",
+      "expected": {
+        "decision": "FILE",
+        "rdr_type": "Inspection - Citation with Associated Violation",
+        "sections": [
+          "H6.1"
+        ]
+      },
+      "stable": true,
+      "attempts": [
+        {
+          "decision": "FILE",
+          "rdr_type": "Inspection - Citation with Associated Violation",
+          "sections": [
+            "H2.1",
+            "H1.3",
+            "H6.1"
+          ],
+          "confidence": 1.0,
+          "reason": "The court letter for citation CT-77120 states the result is 'NOT GUILTY' with no fine or costs, which matches the 'Not Guilty' row in section H6.1. The filing window is open per H2.1, and documentary evidence is present as required by H1.3. Therefore, the recommendation is to file under 'Inspection - Citation with Associated Violation.'",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.3333333333333333
+        },
+        {
+          "decision": "FILE",
+          "rdr_type": "Inspection - Citation with Associated Violation",
+          "sections": [
+            "H2.1",
+            "H6.1",
+            "H1.3"
+          ],
+          "confidence": 1.0,
+          "reason": "The court document for citation CT-77120 shows a 'Not Guilty' result with no fine or costs, matching the conditions in section H6.1 for filing this request. The filing window is open per H2.1, and documentary evidence is present as required by H1.3.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.3333333333333333
+        },
+        {
+          "decision": "FILE",
+          "rdr_type": "Inspection - Citation with Associated Violation",
+          "sections": [
+            "H2.1",
+            "H6.1"
+          ],
+          "confidence": 1.0,
+          "reason": "The court document for citation CT-77120 shows a result of 'NOT GUILTY', which matches the FILE condition in section H6.1. The filing window is open per H2.1, and documentary evidence is present. The recommendation is to file an RDR of type 'Inspection - Citation with Associated Violation.'",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.5
+        }
+      ]
+    },
+    {
+      "case_id": "D03",
+      "expected": {
+        "decision": "DO_NOT_FILE",
+        "rdr_type": null,
+        "sections": [
+          "H6.1"
+        ]
+      },
+      "stable": true,
+      "attempts": [
+        {
+          "decision": "DO_NOT_FILE",
+          "rdr_type": null,
+          "sections": [
+            "H2.1",
+            "H6.1"
+          ],
+          "confidence": 1.0,
+          "reason": "The court document shows the charge was dismissed, but only after payment of court costs. Section H6.1 states that when a citation is dismissed with fine or court costs, the recommendation is DO_NOT_FILE. The filing window is open and documentary evidence is present, but the court result does not qualify for filing.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.5
+        },
+        {
+          "decision": "DO_NOT_FILE",
+          "rdr_type": null,
+          "sections": [
+            "H6.1"
+          ],
+          "confidence": 1.0,
+          "reason": "The court letter shows the charge was dismissed with court costs paid. Section H6.1 states that when a citation is dismissed with fine or court costs, the recommendation is DO_NOT_FILE. The filing window is open, and documentary evidence is present, but the court result does not qualify for filing.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 1.0
+        },
+        {
+          "decision": "DO_NOT_FILE",
+          "rdr_type": null,
+          "sections": [
+            "H6.1"
+          ],
+          "confidence": 1.0,
+          "reason": "The court letter shows the charge was dismissed, but court costs were paid. Section H6.1 states that when a charge is dismissed with court costs, the recommendation is DO_NOT_FILE. The filing window is open and documentary evidence is present, but the court result does not qualify for filing.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 1.0
+        }
+      ]
+    },
+    {
+      "case_id": "D04",
+      "expected": {
+        "decision": "FILE",
+        "rdr_type": "Inspection - Duplicate Record",
+        "sections": [
+          "H7.1"
+        ]
+      },
+      "stable": true,
+      "attempts": [
+        {
+          "decision": "FILE",
+          "rdr_type": "Inspection - Duplicate Record",
+          "sections": [
+            "H2.1",
+            "H7.1"
+          ],
+          "confidence": 1.0,
+          "reason": "The carrier record extract shows the same inspection is listed twice with identical report number, date, time, location, and unit, meeting the criteria in H7.1. The filing window is open per H2.1. There are no missing documents, so the request should be filed.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.5
+        },
+        {
+          "decision": "FILE",
+          "rdr_type": "Inspection - Duplicate Record",
+          "sections": [
+            "H2.1",
+            "H7.1",
+            "H1.3"
+          ],
+          "confidence": 1.0,
+          "reason": "The evidence shows two identical inspection records with the same report number, date, time, location, and unit, which matches the criteria for a duplicate record under section H7.1. The request is within the 3-year filing window per H2.1. The carrier record extract is valid documentary evidence as required by H1.3.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.3333333333333333
+        },
+        {
+          "decision": "FILE",
+          "rdr_type": "Inspection - Duplicate Record",
+          "sections": [
+            "H2.1",
+            "H7.1"
+          ],
+          "confidence": 1.0,
+          "reason": "The carrier record extract shows the same inspection is listed twice with identical report number, date, time, location, and unit, matching the conditions in H7.1. The filing window is open per H2.1. There are no embedded instructions or missing documents.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.5
+        }
+      ]
+    },
+    {
+      "case_id": "D05",
+      "expected": {
+        "decision": "DO_NOT_FILE",
+        "rdr_type": null,
+        "sections": [
+          "H7.2"
+        ]
+      },
+      "stable": true,
+      "attempts": [
+        {
+          "decision": "DO_NOT_FILE",
+          "rdr_type": null,
+          "sections": [
+            "H7.2"
+          ],
+          "confidence": 1.0,
+          "reason": "The evidence shows two inspections on the same unit on the same day, but with different report numbers, times, and locations. According to section H7.2, these are separate events and not duplicates. Therefore, a duplicate record request should not be filed.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 1.0
+        },
+        {
+          "decision": "DO_NOT_FILE",
+          "rdr_type": null,
+          "sections": [
+            "H7.2"
+          ],
+          "confidence": 1.0,
+          "reason": "The evidence shows two inspections on the same truck on the same day, but with different report numbers, times, and locations. According to section H7.2, these are separate events and not duplicates. Therefore, a duplicate record request should not be filed.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 1.0
+        },
+        {
+          "decision": "DO_NOT_FILE",
+          "rdr_type": null,
+          "sections": [
+            "H7.2"
+          ],
+          "confidence": 1.0,
+          "reason": "The evidence shows two inspections on the same truck on the same day, but with different report numbers, times, and locations. Section H7.2 states that these are separate events and not duplicates. Therefore, a duplicate record request should not be filed.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 1.0
+        }
+      ]
+    },
+    {
+      "case_id": "D06",
+      "expected": {
+        "decision": "FILE",
+        "rdr_type": "Inspection - Incorrect Violation",
+        "sections": [
+          "H4.1"
+        ]
+      },
+      "stable": true,
+      "attempts": [
+        {
+          "decision": "FILE",
+          "rdr_type": "Inspection - Incorrect Violation",
+          "sections": [
+            "H2.1",
+            "H1.3",
+            "H4.1"
+          ],
+          "confidence": 0.98,
+          "reason": "The evidence shows the intermodal equipment provider information is missing from the inspection report, which matches the conditions in section H4.1. The filing window is open (H2.1), and the required documentary evidence is present (H1.3).",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.3333333333333333
+        },
+        {
+          "decision": "FILE",
+          "rdr_type": "Inspection - Incorrect Violation",
+          "sections": [
+            "H2.1",
+            "H4.1",
+            "H1.3"
+          ],
+          "confidence": 0.95,
+          "reason": "The evidence shows the intermodal equipment provider information is missing from the inspection report, which matches the conditions in section H4.1. The filing window is open (H2.1), and the interchange receipt is valid documentary evidence (H1.3).",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.3333333333333333
+        },
+        {
+          "decision": "FILE",
+          "rdr_type": "Inspection - Incorrect Violation",
+          "sections": [
+            "H4.1",
+            "H2.1",
+            "H1.3"
+          ],
+          "confidence": 0.95,
+          "reason": "The evidence shows the chassis was supplied by an equipment provider, but the inspection report does not list the provider's information. Handbook_v3.pdf H4.1 states to file when intermodal equipment provider information is missing from the report. The filing window is open (H2.1), and documentary evidence is present (H1.3).",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.3333333333333333
+        }
+      ]
+    },
+    {
+      "case_id": "D07",
+      "expected": {
+        "decision": "FILE",
+        "rdr_type": "Inspection - Assigned to Wrong Carrier",
+        "sections": [
+          "H5.1"
+        ]
+      },
+      "stable": true,
+      "attempts": [
+        {
+          "decision": "FILE",
+          "rdr_type": "Inspection - Assigned to Wrong Carrier",
+          "sections": [
+            "H2.1",
+            "H5.1"
+          ],
+          "confidence": 1.0,
+          "reason": "The lease termination notice (D07_lease_termination.txt) shows the unit was not operating for Demo Carrier C on the inspection date, as required by section H5.1. The filing window is open per H2.1. The evidence is documentary and directly supports the request.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.5
+        },
+        {
+          "decision": "FILE",
+          "rdr_type": "Inspection - Assigned to Wrong Carrier",
+          "sections": [
+            "H2.1",
+            "H5.1"
+          ],
+          "confidence": 1.0,
+          "reason": "The lease termination notice (D07_lease_termination.txt) shows the unit was not operating for Demo Carrier C on the inspection date, as required by section H5.1. The filing window is open per H2.1. All required documentary evidence is present.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.5
+        },
+        {
+          "decision": "FILE",
+          "rdr_type": "Inspection - Assigned to Wrong Carrier",
+          "sections": [
+            "H2.1",
+            "H5.1"
+          ],
+          "confidence": 1.0,
+          "reason": "The lease termination notice shows the unit was not operating for Demo Carrier C on the inspection date, matching H5.1. The filing window is open per H2.1. The evidence is documentary and directly supports the request.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.5
+        }
+      ]
+    },
+    {
+      "case_id": "D08",
+      "expected": {
+        "decision": "FILE",
+        "rdr_type": "Crash Preventability Determination",
+        "sections": [
+          "H9.1",
+          "H9.2"
+        ]
+      },
+      "stable": true,
+      "attempts": [
+        {
+          "decision": "FILE",
+          "rdr_type": "Crash Preventability Determination",
+          "sections": [
+            "H2.2",
+            "H9.1",
+            "H9.2"
+          ],
+          "confidence": 1.0,
+          "reason": "The police report is present and confirms the crash occurred less than 5 years ago, meeting the requirements of H9.1. The report states Unit 1 (Demo Carrier D) was struck in the rear while stopped, matching an eligible crash type under H9.2.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.6666666666666666
+        },
+        {
+          "decision": "FILE",
+          "rdr_type": "Crash Preventability Determination",
+          "sections": [
+            "H2.2",
+            "H9.1",
+            "H9.2"
+          ],
+          "confidence": 1.0,
+          "reason": "The police report is present and confirms the crash occurred less than 5 years ago. The crash type, 'Struck in the rear,' is eligible for preventability review. These conditions meet the requirements in sections H9.1 and H9.2.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.6666666666666666
+        },
+        {
+          "decision": "FILE",
+          "rdr_type": "Crash Preventability Determination",
+          "sections": [
+            "H2.2",
+            "H9.1",
+            "H9.2"
+          ],
+          "confidence": 1.0,
+          "reason": "The police report is present and confirms the crash occurred as described, with Demo Carrier D's vehicle struck in the rear while stopped at a red light. The crash is within the 5-year window and matches an eligible type. Sections H2.2, H9.1, and H9.2 decide the case.",
+          "decision_ok": true,
+          "rdr_type_ok": true,
+          "section_recall": 1.0,
+          "section_precision": 0.6666666666666666
+        }
+      ]
+    }
+  ]
+}

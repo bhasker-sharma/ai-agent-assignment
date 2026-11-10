@@ -1,0 +1,6 @@
+ROADSIDE TIRE SERVICE - INVOICE 88213
+Date of service: 2026-08-12
+Customer: Demo Carrier A
+Unit plate: DEMO-1182
+Work done: Replaced steer tire, position 1 left. Old tire worn below tread limit.
+Total: 412.00 USD

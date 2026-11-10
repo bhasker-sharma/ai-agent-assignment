@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "predictions.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "case_id",
+      "decision",
+      "rdr_type",
+      "reason",
+      "citations",
+      "evidence_used",
+      "draft_narrative",
+      "confidence"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "case_id": {
+        "type": "string"
+      },
+      "decision": {
+        "enum": [
+          "FILE",
+          "DO_NOT_FILE",
+          "NEEDS_MORE_INFO"
+        ]
+      },
+      "rdr_type": {
+        "enum": [
+          "Inspection - Incorrect Violation",
+          "Inspection - Assigned to Wrong Carrier",
+          "Inspection - Citation with Associated Violation",
+          "Inspection - Duplicate Record",
+          "Inspection - Incorrect Information",
+          "Crash Preventability Determination",
+          null
+        ]
+      },
+      "reason": {
+        "type": "string"
+      },
+      "citations": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "source",
+            "section"
+          ],
+          "properties": {
+            "source": {
+              "type": "string"
+            },
+            "section": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "evidence_used": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "draft_narrative": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "confidence": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    }
+  }
+}

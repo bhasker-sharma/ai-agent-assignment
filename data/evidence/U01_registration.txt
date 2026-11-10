@@ -1,0 +1,5 @@
+VEHICLE REGISTRATION RECORD
+VIN: TESTVIN0000000042
+Correct plate: DEMO-4177
+Plate shown on inspection report: DEMO-4117
+Valid: 2022-11-01 to 2023-10-31

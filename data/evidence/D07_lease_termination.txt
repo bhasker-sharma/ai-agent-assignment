@@ -1,0 +1,6 @@
+LEASE TERMINATION NOTICE
+Lessee: Demo Carrier C
+Unit: plate DEMO-3310, VIN TESTVIN0000000032
+Lease ended: 2026-05-20
+Plates and carrier markings removed and returned: 2026-05-21
+New operator from 2026-05-22: Fictional Haulage Inc.

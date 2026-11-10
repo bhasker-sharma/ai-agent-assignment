@@ -1,0 +1,258 @@
+{
+  "as_of_date": "2026-11-06",
+  "cases": [
+    {
+      "case_id": "D01",
+      "record_type": "inspection",
+      "carrier": "Demo Carrier A",
+      "report_number": "TX-DEMO-41807",
+      "event_date": "2026-08-11",
+      "state": "TX",
+      "level": 2,
+      "unit": {
+        "plate": "DEMO-1182",
+        "vin": "TESTVIN0000000011"
+      },
+      "violations": [
+        {
+          "code": "393.75(a)(3)",
+          "description": "Tire tread depth below minimum",
+          "out_of_service": false,
+          "citation_number": null
+        }
+      ],
+      "staff_note": "Driver replaced the tire the next morning. Invoice attached. Please get this violation removed.",
+      "evidence_files": [
+        "D01_tire_invoice.txt"
+      ],
+      "expected": {
+        "decision": "DO_NOT_FILE",
+        "rdr_type": null,
+        "sections": [
+          "H4.2"
+        ]
+      }
+    },
+    {
+      "case_id": "D02",
+      "record_type": "inspection",
+      "carrier": "Demo Carrier A",
+      "report_number": "AZ-DEMO-20931",
+      "event_date": "2026-05-02",
+      "state": "AZ",
+      "level": 3,
+      "unit": {
+        "plate": "DEMO-1190",
+        "vin": "TESTVIN0000000012"
+      },
+      "violations": [
+        {
+          "code": "392.2-SLLS2",
+          "description": "Speeding 6-10 mph over the limit",
+          "out_of_service": false,
+          "citation_number": "CT-77120"
+        }
+      ],
+      "staff_note": "Driver fought the ticket and won.",
+      "evidence_files": [
+        "D02_court_letter.txt"
+      ],
+      "expected": {
+        "decision": "FILE",
+        "rdr_type": "Inspection - Citation with Associated Violation",
+        "sections": [
+          "H6.1"
+        ]
+      }
+    },
+    {
+      "case_id": "D03",
+      "record_type": "inspection",
+      "carrier": "Demo Carrier B",
+      "report_number": "CA-DEMO-55218",
+      "event_date": "2026-04-19",
+      "state": "CA",
+      "level": 2,
+      "unit": {
+        "plate": "DEMO-2204",
+        "vin": "TESTVIN0000000021"
+      },
+      "violations": [
+        {
+          "code": "392.16",
+          "description": "Failing to use seat belt",
+          "out_of_service": false,
+          "citation_number": "CT-80415"
+        }
+      ],
+      "staff_note": "Ticket was dismissed. File this one.",
+      "evidence_files": [
+        "D03_court_letter.txt"
+      ],
+      "expected": {
+        "decision": "DO_NOT_FILE",
+        "rdr_type": null,
+        "sections": [
+          "H6.1"
+        ]
+      }
+    },
+    {
+      "case_id": "D04",
+      "record_type": "inspection",
+      "carrier": "Demo Carrier B",
+      "report_number": "NM-DEMO-30177",
+      "event_date": "2026-07-08",
+      "state": "NM",
+      "level": 2,
+      "unit": {
+        "plate": "DEMO-2231",
+        "vin": "TESTVIN0000000022"
+      },
+      "violations": [
+        {
+          "code": "393.9(a)",
+          "description": "Inoperable required lamp",
+          "out_of_service": false,
+          "citation_number": null
+        }
+      ],
+      "staff_note": "Same inspection shows twice on our carrier record.",
+      "evidence_files": [
+        "D04_record_extract.txt"
+      ],
+      "expected": {
+        "decision": "FILE",
+        "rdr_type": "Inspection - Duplicate Record",
+        "sections": [
+          "H7.1"
+        ]
+      }
+    },
+    {
+      "case_id": "D05",
+      "record_type": "inspection",
+      "carrier": "Demo Carrier B",
+      "report_number": "NM-DEMO-30402",
+      "event_date": "2026-07-21",
+      "state": "NM",
+      "level": 2,
+      "unit": {
+        "plate": "DEMO-2231",
+        "vin": "TESTVIN0000000022"
+      },
+      "violations": [
+        {
+          "code": "393.9(a)",
+          "description": "Inoperable required lamp",
+          "out_of_service": false,
+          "citation_number": null
+        }
+      ],
+      "staff_note": "Two inspections on the same truck on the same day. Looks like a duplicate.",
+      "evidence_files": [
+        "D05_record_extract.txt"
+      ],
+      "expected": {
+        "decision": "DO_NOT_FILE",
+        "rdr_type": null,
+        "sections": [
+          "H7.2"
+        ]
+      }
+    },
+    {
+      "case_id": "D06",
+      "record_type": "inspection",
+      "carrier": "Demo Carrier C",
+      "report_number": "CA-DEMO-61044",
+      "event_date": "2026-09-03",
+      "state": "CA",
+      "level": 1,
+      "unit": {
+        "plate": "DEMO-CHZ-77",
+        "vin": "TESTVIN0000000031"
+      },
+      "violations": [
+        {
+          "code": "393.47(e)",
+          "description": "Brake out of adjustment on intermodal chassis",
+          "out_of_service": false,
+          "citation_number": null
+        }
+      ],
+      "staff_note": "Chassis belongs to the equipment provider, not us. Equipment provider details are missing from the report.",
+      "evidence_files": [
+        "D06_interchange_receipt.txt"
+      ],
+      "expected": {
+        "decision": "FILE",
+        "rdr_type": "Inspection - Incorrect Violation",
+        "sections": [
+          "H4.1"
+        ]
+      }
+    },
+    {
+      "case_id": "D07",
+      "record_type": "inspection",
+      "carrier": "Demo Carrier C",
+      "report_number": "OR-DEMO-14482",
+      "event_date": "2026-06-14",
+      "state": "OR",
+      "level": 3,
+      "unit": {
+        "plate": "DEMO-3310",
+        "vin": "TESTVIN0000000032"
+      },
+      "violations": [
+        {
+          "code": "395.8(e)(1)",
+          "description": "False report of duty status",
+          "out_of_service": false,
+          "citation_number": null
+        }
+      ],
+      "staff_note": "This truck left our fleet in May. Why is this on us?",
+      "evidence_files": [
+        "D07_lease_termination.txt"
+      ],
+      "expected": {
+        "decision": "FILE",
+        "rdr_type": "Inspection - Assigned to Wrong Carrier",
+        "sections": [
+          "H5.1"
+        ]
+      }
+    },
+    {
+      "case_id": "D08",
+      "record_type": "crash",
+      "carrier": "Demo Carrier D",
+      "report_number": "CRASH-DEMO-9012",
+      "event_date": "2025-10-27",
+      "state": "NV",
+      "level": null,
+      "unit": {
+        "plate": "DEMO-4102",
+        "vin": "TESTVIN0000000041"
+      },
+      "violations": [],
+      "staff_note": "Our truck was hit from behind at a red light. Police report attached.",
+      "evidence_files": [
+        "D08_police_report.txt"
+      ],
+      "crash_type": "Struck in the rear",
+      "fatalities": 0,
+      "injuries": 1,
+      "expected": {
+        "decision": "FILE",
+        "rdr_type": "Crash Preventability Determination",
+        "sections": [
+          "H9.1",
+          "H9.2"
+        ]
+      }
+    }
+  ]
+}

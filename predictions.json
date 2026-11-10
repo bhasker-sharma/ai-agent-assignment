@@ -1,0 +1,72 @@
+[
+  {
+    "case_id": "U01",
+    "decision": "DO_NOT_FILE",
+    "rdr_type": null,
+    "reason": "The inspection occurred more than 3 years ago, which is outside the filing window for inspection requests as stated in section H2.1. Even though the registration document supports a plate correction, the rules do not allow filing after the window closes.",
+    "citations": [
+      {
+        "source": "Handbook_v3.pdf",
+        "section": "H2.1"
+      }
+    ],
+    "evidence_used": [],
+    "draft_narrative": null,
+    "confidence": 1.0
+  },
+  {
+    "case_id": "U02",
+    "decision": "FILE",
+    "rdr_type": "Inspection - Citation with Associated Violation",
+    "reason": "The court disposition document shows the driver was convicted of a different charge (Improper lane use) than the original violation (Speeding 11-14 mph over the limit). Section H6.1 states to FILE when the court result is 'Conviction of a Different Charge' as written on the court document. The filing window is open per H2.1.",
+    "citations": [
+      {
+        "source": "Handbook_v3.pdf",
+        "section": "H2.1"
+      },
+      {
+        "source": "Handbook_v3.pdf",
+        "section": "H6.1"
+      }
+    ],
+    "evidence_used": [
+      "U02_court_disposition_scan.pdf"
+    ],
+    "draft_narrative": "The attached court disposition (U02_court_disposition_scan.pdf) shows that citation CT-91882, originally for 'Speeding 11-14 mph over the limit,' was amended and resulted in a conviction for 'Improper lane use.' We request the violation be updated to reflect the court outcome as documented.",
+    "confidence": 0.95
+  },
+  {
+    "case_id": "U03",
+    "decision": "NEEDS_MORE_INFO",
+    "rdr_type": null,
+    "reason": "The only evidence provided is a driver statement, which is not documentary evidence as required by section H1.3. No other supporting documents are attached. The filing window is open, but more information is needed to proceed.",
+    "citations": [
+      {
+        "source": "Handbook_v3.pdf",
+        "section": "H1.3"
+      }
+    ],
+    "evidence_used": [
+      "U03_driver_statement.txt"
+    ],
+    "draft_narrative": null,
+    "confidence": 0.95
+  },
+  {
+    "case_id": "U04",
+    "decision": "NEEDS_MORE_INFO",
+    "rdr_type": null,
+    "reason": "The court document states the citation is held in abeyance and no final disposition has been entered. Section H6.1 requires waiting for a final result when a case is held in abeyance. No other rule applies.",
+    "citations": [
+      {
+        "source": "Handbook_v3.pdf",
+        "section": "H6.1"
+      }
+    ],
+    "evidence_used": [
+      "U04_court_notice.txt"
+    ],
+    "draft_narrative": null,
+    "confidence": 1.0
+  }
+]

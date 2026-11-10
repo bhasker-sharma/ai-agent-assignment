@@ -1,0 +1,6 @@
+POLICE TRAFFIC COLLISION REPORT (FICTIONAL)
+Report no. PD-554120   Date: 2025-10-27   Location: Sahara Rd at 4th St, NV
+Unit 1 (Demo Carrier D, plate DEMO-4102): stopped at red signal.
+Unit 2 (passenger car): failed to stop, struck rear of Unit 1.
+Injuries: 1 (occupant of Unit 2). Fatalities: 0.
+Primary cause: Unit 2 driver inattention. No contributing factor for Unit 1.

@@ -1,0 +1,4 @@
+CARRIER RECORD EXTRACT (two rows returned)
+Report no.     | Date       | Time  | Location            | Plate     | Level
+NM-DEMO-30402  | 2026-07-21 | 07:15 | Port of Entry 12    | DEMO-2231 | 2
+NM-DEMO-30419  | 2026-07-21 | 16:50 | Highway Patrol MM88 | DEMO-2231 | 2
